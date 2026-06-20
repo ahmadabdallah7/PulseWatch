@@ -1,0 +1,20 @@
+.search-bar {
+  background-color: transparent;
+  border-color: #596e83b0;
+  color: white !important;
+  caret-color: white;
+}
+
+.search-bar:focus {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.search-bar::placeholder {
+  color: rgb(105, 101, 101);
+}
+
+.btn.search-btn {
+  background-color: transparent;
+  border-color: #596e83b0;
+}

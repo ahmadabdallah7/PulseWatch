@@ -1,0 +1,8 @@
+{
+  "name": "pulsewatch",
+  "private": true,
+  "scripts": {
+    "client": "cd next-client && npm run dev",
+    "server": "cd server && nodemon src/index.ts"
+  }
+}
