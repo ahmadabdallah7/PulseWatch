@@ -3,7 +3,7 @@ import "./Hero.css";
 
 export default function Hero() {
   return (
-    <div className="container-fluid d-flex justify-content-center align-items-center px-4 py-5 border-bottom hero-section">
+    <div className="container-fluid d-flex justify-content-center align-items-center px-4 pt-4 pb-4 border-bottom hero-section">
       <div className="row flex-lg-row-reverse justify-content-center align-items-center py-3 g-5">
         <div className="d-flex col-10 col-sm-8 col-lg-6">
           <img
@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="col-lg-6">
           <h1
             id="header"
-            className="display-5 fw-bold text-body-emphasis lh-1 mb-3"
+            className="display-5 fw-bold text-body-emphasis text-nowrap lh-1 mb-3"
           >
             Real-time status monitoring.
           </h1>

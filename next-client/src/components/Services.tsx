@@ -32,12 +32,10 @@ export default async function Services() {
   }
 
   return (
-    <div className="container d-flex ps-xl-4 mt-5">
-      <div>
-        <h2>Top 10 most reported services</h2>
-        <p className="mb-4">in the last hour</p>
-        <ServicesClient services={services} />
-      </div>
+    <div className="container mt-4 mb-4">
+      <h2>Top 10 most searched services</h2>
+      <p className="mb-4">in the last hour</p>
+      <ServicesClient services={services} />
     </div>
   );
 }

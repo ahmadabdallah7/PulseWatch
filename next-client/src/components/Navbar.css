@@ -34,6 +34,24 @@
   width: 100%;
 }
 
+.search-wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (max-width: 991px) {
+  .search-wrapper {
+    order: 3;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
 /* Logo styles */
 .logo {
   font-size: 1.5rem;
