@@ -15,7 +15,7 @@ export default function Hero() {
             loading="lazy"
           />
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 ps-auto ps-xxl-0 pe-4">
           <h1
             id="header"
             className="display-5 fw-bold text-body-emphasis text-nowrap lh-1 mb-3"
