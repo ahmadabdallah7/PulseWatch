@@ -1,5 +1,9 @@
 import axios from "axios";
 
+// Components
+import SelectedService from "@/components/SelectedService";
+import Legend from "@/components/Legend";
+
 // Types
 type ResultPageParams = {
   params: Promise<{
@@ -37,5 +41,14 @@ export default async function Result({ params }: ResultPageParams) {
     error = "Failed to fetch the service data";
   }
 
-  return <div></div>;
+  return (
+    <div className="container">
+      <div className="mt-5">
+        {service && <SelectedService service={service} />}
+        <div className="mb-4">
+          <Legend />
+        </div>
+      </div>
+    </div>
+  );
 }

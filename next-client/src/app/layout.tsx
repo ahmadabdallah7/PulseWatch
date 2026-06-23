@@ -8,12 +8,25 @@ import "./globals.css";
 // Components
 import Navbar from "@/components/Navbar";
 
+// Fonts
+import { Inter, Space_Grotesk } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
+
 export const metadata: Metadata = {
   title: "PulseWatch",
   description:
     "PulseWatch is a web app for tracking services outages and uptime.",
   icons: {
-    icon: "/images/Logo v2.png",
+    icon: "/images/LogoV2.png",
   },
 };
 
@@ -23,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body>
         <BootstrapClient />
         <Navbar />

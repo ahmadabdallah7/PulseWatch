@@ -55,7 +55,7 @@ export default function Card({
 
       <div className="reports-section">
         <h2 className="reports-count">{reports1h}</h2>
-        <p className="reports-label">reports</p>
+        <p className="reports-label">Reports</p>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark navbar-modern">
       <div className="container">
         <Link className="navbar-brand logo" href="/">
-          <img src="images/Logo v2.png" width={50} className="mx-2" />
+          <img src="/images/LogoV2.png" width={50} className="mx-2" />
           PulseWatch
         </Link>
 

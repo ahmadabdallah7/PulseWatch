@@ -19,7 +19,7 @@ export default function Searchbar() {
   function handleSearch(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     if (query !== "") {
-      router.push("/service/" + encodeURIComponent(query));
+      router.push("/service/" + encodeURIComponent(query.toLowerCase()));
     }
   }
 

@@ -4,10 +4,10 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <div className="container-fluid d-flex justify-content-center align-items-center px-4 pt-4 pb-4 border-bottom hero-section">
-      <div className="row flex-lg-row-reverse justify-content-center align-items-center py-3 g-5">
+      <div className="row flex-lg-row-reverse justify-content-center align-items-center ms-xxl-5 ps-xxl-2 py-3 g-5">
         <div className="d-flex col-10 col-sm-8 col-lg-6">
           <img
-            src="images/Hero v2.png"
+            src="images/HeroV2.png"
             className="d-block ms-5 img-fluid"
             alt="Bootstrap Themes"
             width="430"
