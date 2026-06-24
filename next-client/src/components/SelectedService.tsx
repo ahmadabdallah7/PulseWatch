@@ -21,16 +21,21 @@ type SelectedServiceProps = {
   service: Service;
 };
 
+let statusText: string = "";
+
 export default function SelectedService({ service }: SelectedServiceProps) {
   function getStatusClass(status: string) {
     switch (status) {
       case "operational":
+        statusText = "Stable";
         return "success";
 
       case "degraded":
+        statusText = "Issues";
         return "warning";
 
       case "down":
+        statusText = "Outage";
         return "danger";
 
       default:
@@ -45,15 +50,20 @@ export default function SelectedService({ service }: SelectedServiceProps) {
       <div className="card-body p-5 main-card">
         <div className="row align-items-center">
           {/* Logo + Name */}
-          <div className="col-lg-4 d-flex align-items-center mb-5 mb-xl-0">
+          <div className="col-lg-4 col-xxl-5 d-flex align-items-center me-2 me-xl-0 mb-5 mb-xl-0 logo-name-section">
             <img
               src={service.logo_url}
               alt={service.name}
               className="service-logo-large"
             />
 
-            <div className="ms-3 name-status">
-              <h1 className="service-title">{service.name}</h1>
+            <div className="ms-3 ms-xxl-4 name-status">
+              <h1
+                className="service-title"
+                style={{ fontSize: "clamp(1rem, 100cqi, 2.1rem)" }}
+              >
+                {service.name}
+              </h1>
 
               <div className="d-flex align-items-center">
                 <span className={`status-dot bg-${statusClass}`}></span>
@@ -65,7 +75,7 @@ export default function SelectedService({ service }: SelectedServiceProps) {
           </div>
 
           {/* Category */}
-          <div className="col-lg-3 mb-3 mb-xl-0 info-section">
+          <div className="col-lg-2 me-5 mb-3 mb-xl-0 info-section">
             <div className="info-box">
               <div className="icon-box">
                 <CategoryIcon fontSize="large" />
@@ -81,7 +91,7 @@ export default function SelectedService({ service }: SelectedServiceProps) {
           </div>
 
           {/* Status */}
-          <div className="col-lg-3 mb-3 mb-xl-0">
+          <div className="col-lg-2 me-5 mb-3 mb-xl-0">
             <div className="info-box">
               <div className="icon-box status-red">
                 <MonitorHeartIcon fontSize="large" />
@@ -90,7 +100,7 @@ export default function SelectedService({ service }: SelectedServiceProps) {
               <div>
                 <p className="info-label fw-medium">Status</p>
                 <h4 className={`text-${statusClass} capitalize-text`}>
-                  {service.status}
+                  {statusText}
                 </h4>
               </div>
             </div>

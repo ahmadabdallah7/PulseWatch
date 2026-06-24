@@ -2,6 +2,7 @@ import axios from "axios";
 
 // Components
 import SelectedService from "@/components/SelectedService";
+import Error from "@/components/Error";
 import Legend from "@/components/Legend";
 
 // Types
@@ -32,22 +33,24 @@ export default async function Result({ params }: ResultPageParams) {
     const response = await axios.get(
       `https://isitdownstatus.com/api/v1/status/${query}`,
     );
-    if (response.data.error) {
-      error = response.data.error;
-    } else {
+    if (response.data.data) {
       service = response.data.data;
     }
   } catch (e) {
-    error = "Failed to fetch the service data";
+    error = "Service is not found, try a different search.";
   }
 
   return (
     <div className="container">
       <div className="mt-5">
-        {service && <SelectedService service={service} />}
-        <div className="mb-4">
-          <Legend />
-        </div>
+        {service && (
+          <div>
+            <SelectedService service={service} />
+            <Legend />
+          </div>
+        )}
+        {error && <Error error={error} />}
+        <div className="mb-4"></div>
       </div>
     </div>
   );

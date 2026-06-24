@@ -24,7 +24,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "PulseWatch",
   description:
-    "PulseWatch is a web app for tracking services outages and uptime.",
+    "Track the status of popular online services and stay informed about outages and disruptions.",
   icons: {
     icon: "/images/LogoV2.png",
   },
