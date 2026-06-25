@@ -4,6 +4,10 @@ PulseWatch is a modern web application for monitoring service status, outages, a
 
 ## Screenshots
 
+<img width="1365" height="878" alt="PulseWatch 1" src="https://github.com/user-attachments/assets/fa0d6731-386f-488d-8bf7-c6854bcace82" />
+<img width="1386" height="649" alt="PulseWatch 2" src="https://github.com/user-attachments/assets/31535cf8-ec92-4730-a006-c631e1b721b0" />
+<img width="1376" height="642" alt="PulseWatch 3" src="https://github.com/user-attachments/assets/ab5d5569-9776-4727-b6bb-3360569ce84a" />
+
 ---
 
 ## Features
@@ -55,7 +59,7 @@ cd pulsewatch
 Install dependencies:
 
 ```bash
-npm install
+npm run dependencies
 ```
 
 Start the development server:

@@ -2,6 +2,7 @@
   "name": "pulsewatch",
   "private": true,
   "scripts": {
+    "dependencies": "cd next-client && npm install",
     "client": "cd next-client && npm run dev"
   }
 }
